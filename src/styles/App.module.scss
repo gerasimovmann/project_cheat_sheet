@@ -1,0 +1,203 @@
+@import './config.scss';
+
+// animation
+@keyframes sweep {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 2000px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  background-color: $backgroundWrapper;
+  border: 1px solid $wrapperBorder;
+  border-radius: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: background 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .addSection {
+    border: 1px solid var(--backgroundSummaryBorder);
+    border-width: 3px;
+    background-color: transparent;
+    border-style: dashed;
+    border-radius: 8px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-family: 'Regular';
+    font-weight: 400;
+    color: var(--colorText);
+    font-size: 16px;
+  }
+
+  .searchTitle {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-family: 'Light';
+      font-weight: 300;
+      font-size: 45px;
+      line-height: 40px;
+      color: $colorH1;
+
+      span {
+        font-family: 'Medium';
+        font-weight: 500;
+        color: $colorH1Span;
+        font-weight: 500;
+        background-size: 100%;
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(
+          326deg,
+          #adfbda 0,
+          #35c3ff 30%,
+          #fda399 50%,
+          #76d880 70%,
+          #ebf38b 90%,
+          #adfbda 100%
+        );
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .sectionH2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #9ca3af;
+      font-size: 23px;
+
+      h2 {
+        font-weight: 500;
+        font-family: 'Medium';
+        font-size: 24px;
+        line-height: 40px;
+        color: $colorH2;
+      }
+    }
+
+    .accordion[open] summary {
+      background: $backgroundSummaryOpen;
+      border-radius: 8px 8px 0px 0px;
+      border-style: solid;
+      border-color: $backgroundSummaryBorder;
+    }
+
+    .accordion[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    summary::after {
+      content: '';
+      position: absolute;
+      background-image: url('../img/chevron-down.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+    }
+
+    .accordion {
+      summary {
+        background: $backgroundSummary;
+        border: 1px solid $backgroundSummaryBorder;
+        border-radius: 8px;
+        padding: 17px 45px 17px 20px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        transition: background 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .accordionBody {
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: $backgroundSummaryBorder;
+        border-radius: 0px 0px 8px 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .elAcc {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          // justify-content: space-between;
+
+          pre {
+            width: 100%;
+          }
+
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $colorText;
+          }
+
+          h4 {
+            font-size: 25px;
+          }
+
+          code {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ____________________
+details > summary:first-of-type {
+  list-style: none;
+}
+
+.fixedBar {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.svgDelete {
+  fill: #374151;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+  width: 20px;
+}
+
+.svgDelete:hover {
+  fill: #711a1a;
+}

@@ -1,0 +1,97 @@
+// vars
+
+:root[data-theme='light'] {
+  --backgroundBody: #f7f7f7;
+  --backgroundWrapper: #ffff;
+  --wrapperBorder: #ededed;
+  --backgroundSummary: #ffff;
+  --backgroundSummaryOpen: #f3f4f6;
+  --backgroundSummaryBorder: #ededed;
+  --backgroundSummaryBorderOpen: #ededed;
+  --backgroundSvg: #787878;
+  --backgroundButton: #e5e7eb7f;
+  --backgroundButtonHover: #e5e7eb;
+  --backgroundPopup: white;
+  --backgroundPopupBorder: #a4cafe;
+  --backgroundPopupSvg: #e1effe;
+  --backgroundPopupColor: #2a2929;
+  --backgroundInput: #f9fafb;
+  --fillPopupSvg: #1c64f2;
+  --buttonFixedEditBackground: #fde8e8;
+  --buttonFixedEditBackgroundHover: #edb1b1;
+  --buttonFixedEditSvg: #f05252;
+
+  //text
+  --colorH1: #3d4a5c;
+  --colorH1Span: #9f8600;
+  --colorH2: #3d4a5c;
+  --colorText: #3d4a5c;
+  --colorTextPopup: #a8b3c8;
+}
+
+:root[data-theme='dark'] {
+  --backgroundBody: #111928;
+  --backgroundWrapper: #1f2a37;
+  --wrapperBorder: #1f2a37;
+  --backgroundSummary: #1f2a37;
+  --backgroundSummaryOpen: #1f2a37;
+  --backgroundSummaryBorder: #374151;
+  --backgroundSummaryBorderOpen: #374151;
+  --backgroundInput: #374151;
+  --backgroundSvg: #76a9fa;
+  --backgroundButton: #233876;
+  --backgroundButtonHover: #1c2d61;
+  --backgroundPopup: #1f2a37;
+  --backgroundPopupBorder: #1f2a37;
+  --backgroundPopupColor: rgb(255, 255, 255);
+  --backgroundPopupSvg: #233876;
+  --fillPopupSvg: #1c64f2;
+  --buttonFixedEditBackground: #771d1d;
+  --buttonFixedEditBackgroundHover: #5f1111;
+  --buttonFixedEditSvg: #f05252;
+
+  //text
+  --colorH1: #ffff;
+  --colorH1Span: #9f8600;
+  --colorH2: #ffff;
+  --colorText: #9ca3af;
+  --colorTextPopup: #9ca3af;
+}
+
+:root[data-popup='editSection'],
+:root[data-popup='editAccordion'],
+:root[data-popup='editAccordionChildren'],
+:root[data-popup='info'] {
+  overflow: hidden;
+}
+
+// colors
+$backgroundBody: var(--backgroundBody);
+$backgroundWrapper: var(--backgroundWrapper);
+$wrapperBorder: var(--wrapperBorder);
+$backgroundSummary: var(--backgroundSummary);
+$backgroundSummaryOpen: var(--backgroundSummaryOpen);
+$backgroundSummaryBorder: var(--backgroundSummaryBorder);
+$backgroundSummaryBorderOpen: var(--backgroundSummaryBorderOpen);
+$backgroundSvg: var(--backgroundSvg);
+$backgroundButton: var(--backgroundButton);
+$backgroundButtonHover: var(--backgroundButtonHover);
+$backgroundPopup: var(--backgroundPopup);
+$backgroundPopupBorder: var(--backgroundPopupBorder);
+$backgroundPopupSvg: var(--backgroundPopupSvg);
+$backgroundInput: var(--backgroundInput);
+$backgroundPopupColor: var(--backgroundPopupColor);
+$fillPopupSvg: var(--fillPopupSvg);
+$buttonFixedEditBackground: var(--buttonFixedEditBackground);
+$buttonFixedEditBackgroundHover: var(--buttonFixedEditBackgroundHover);
+$buttonFixedEditSvg: var(--buttonFixedEditSvg);
+
+$colorH1: var(--colorH1);
+$colorH1Span: var(--colorH1Span);
+$colorH2: var(--colorH2);
+$colorText: var(--colorText);
+$colorTextPopup: var(--colorTextPopup);
+
+//dark colors
+
+// sizes
