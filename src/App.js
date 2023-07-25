@@ -23,6 +23,8 @@ const themes = {
 const getTheme = () => {
   // при загрузке страницы получает из localStorage записанную тему
   const theme = `${window?.localStorage?.getItem('theme')}`
+  console.log(theme)
+  if (theme === 'undefined') return 'light'
   if (theme === 'light' || theme === 'dark') return theme
 }
 
@@ -80,6 +82,7 @@ const App = function App() {
 
   console.log(localStorageSections)
   console.log(localStorageAccordions)
+  console.log(getTheme())
 
   useEffect(() => {
     localStorage.setItem('dataSections', JSON.stringify(sections))
