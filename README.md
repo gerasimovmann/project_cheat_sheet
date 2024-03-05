@@ -8,7 +8,7 @@
 
 Визуализация:
 
-<img src="git_source/IMG_0212_optim.gif" width="600" height="auto"/>
+<img src="git_source/IMG_0212.gif" width="600" height="auto"/>
 
 Приложение 
 ## Для запуска
@@ -29,7 +29,7 @@ npm start
 #### Изменение цветовой темы
 Функция изменения цветовой темы по кнопке.
 #### Режим изменения информации
-<img src="git_source/IMG_0213_optim.gif" width="600" height="auto"/>
+<img src="git_source/IMG_0213.gif" width="" height="auto"/>
 
 В данном режиме приложение внутри интерфейса позволяет менять информацию (Для простоты реализации, данные храняться в localStorage :smile:)
 
