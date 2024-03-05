@@ -3,7 +3,7 @@
 # Learning projects Cheat Sheet JavaScript
 
 [![en](https://img.shields.io/badge/lang-en-blue)](/README.en.md)
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](/README.ru.md)
+[![ru](https://img.shields.io/badge/lang-ru-green.svg)](/README.md)
 
 This training project was designed to practice React knowledge.
 
