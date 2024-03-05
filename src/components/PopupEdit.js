@@ -1,25 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import styles from './PopupEdit.module.scss'
-import { IoCloseSharp } from 'react-icons/io5'
-import Select from './Select'
+import React, { useState, useEffect } from "react"
+import styles from "./PopupEdit.module.scss"
+import { IoCloseSharp } from "react-icons/io5"
+import Select from "./Select"
 
-function PopupEdit({
-  setPopupOpen,
-  popupOpen,
-  sections,
-  addSection,
-  setProvideIdSection,
-  addAccordion,
-  accordions,
-  addAccordionChildren,
-}) {
-  const [selectSec, setSelectSec] = useState('') // textarea
-  const [selectAcc, setSelectAcc] = useState('') // select Section
-  const [selectTag, setSelectTag] = useState('') // select Accordion
-  const [inputText, setInputText] = useState('') // select Tag
+function PopupEdit({ setPopupOpen, popupOpen, sections, addSection, setProvideIdSection, addAccordion, accordions, addAccordionChildren }) {
+  const [selectSec, setSelectSec] = useState("") // textarea
+  const [selectAcc, setSelectAcc] = useState("") // select Section
+  const [selectTag, setSelectTag] = useState("") // select Accordion
+  const [inputText, setInputText] = useState("") // select Tag
 
   const makeAddData = (func) => {
-    if (popupOpen === 'editAccordionChildren') {
+    if (popupOpen === "editAccordionChildren") {
       if (!inputText || !selectTag) {
         closePopup()
         return
@@ -39,7 +30,7 @@ function PopupEdit({
     if (inputText) {
       func(inputText)
       setPopupOpen(false)
-      setInputText('')
+      setInputText("")
       setProvideIdSection(false)
       return
     }
@@ -48,20 +39,16 @@ function PopupEdit({
   const closePopup = () => {
     setPopupOpen(false)
     setProvideIdSection(false)
-    setInputText('')
-    setSelectSec('')
-    setSelectAcc('')
-    setSelectTag('')
+    setInputText("")
+    setSelectSec("")
+    setSelectAcc("")
+    setSelectTag("")
   }
 
   return (
     <div
       className={
-        popupOpen === 'editAccordion' ||
-        popupOpen === 'editSection' ||
-        popupOpen === 'editAccordionChildren'
-          ? `${styles.popupBack} ${styles.popupBackEditOpen}`
-          : styles.popupBack
+        popupOpen === "editAccordion" || popupOpen === "editSection" || popupOpen === "editAccordionChildren" ? `${styles.popupBack} ${styles.popupBackEditOpen}` : styles.popupBack
       }
       onClick={(e) => {
         e.currentTarget === e.target && closePopup()
@@ -69,25 +56,21 @@ function PopupEdit({
     >
       <div
         className={
-          popupOpen === 'editAccordion' ||
-          popupOpen === 'editSection' ||
-          popupOpen === 'editAccordionChildren'
+          popupOpen === "editAccordion" || popupOpen === "editSection" || popupOpen === "editAccordionChildren"
             ? `${styles.popupBody} ${styles.popupBodyEditOpen}`
             : styles.popupBody
         }
       >
         <div className={styles.popupContent}>
-          {popupOpen === 'editAccordion' && (
+          {popupOpen === "editAccordion" && (
             <>
               <h2>Введите им аккордиона:</h2>
               <div className={styles.popupBlockElement}>
                 <textarea
                   className={styles.inputAdd}
                   onChange={(e) => setInputText(e.target.value)}
-                  type='text'
-                  onKeyPress={(e) =>
-                    e.key === 'Enter' && e.shiftKey && makeAddData(addAccordion)
-                  }
+                  type="text"
+                  onKeyPress={(e) => e.key === "Enter" && e.shiftKey && makeAddData(addAccordion)}
                   value={inputText}
                 />
                 <button
@@ -100,16 +83,16 @@ function PopupEdit({
                 </button>
               </div>
             </>
-          )}{' '}
-          {popupOpen === 'editAccordionChildren' && (
+          )}{" "}
+          {popupOpen === "editAccordionChildren" && (
             <>
               <h2>Выберите параметры children:</h2>
               <div className={styles.popupBlockElement}>
                 <Select
                   options={[
-                    { label: 'h4', value: 'h4' },
-                    { label: 'p', value: 'p' },
-                    { label: 'code', value: 'code' },
+                    { label: "h4", value: "h4" },
+                    { label: "p", value: "p" },
+                    { label: "code", value: "div" },
                   ]}
                   onOptionSelect={(option) => setSelectTag(option.value)}
                 >
@@ -118,12 +101,8 @@ function PopupEdit({
                 <textarea
                   className={styles.inputAdd}
                   onChange={(e) => setInputText(e.target.value)}
-                  type='text'
-                  onKeyPress={(e) =>
-                    e.key === 'Enter' &&
-                    e.shiftKey &&
-                    makeAddData(addAccordionChildren)
-                  }
+                  type="text"
+                  onKeyPress={(e) => e.key === "Enter" && e.shiftKey && makeAddData(addAccordionChildren)}
                   value={inputText}
                 />
                 <button
@@ -137,19 +116,15 @@ function PopupEdit({
               </div>
             </>
           )}
-          {popupOpen === 'editSection' && (
-            <div
-              className={`${styles.popupBlockElement} ${styles.popupBlockElementSect}`}
-            >
+          {popupOpen === "editSection" && (
+            <div className={`${styles.popupBlockElement} ${styles.popupBlockElementSect}`}>
               <h2>Введите название секции:</h2>
               <div className={styles.popupBlockElementSectFlex}>
                 <textarea
                   className={styles.inputAdd}
                   onChange={(e) => setInputText(e.target.value)}
-                  type='text'
-                  onKeyPress={(e) =>
-                    e.key === 'Enter' && e.shiftKey && makeAddData(addSection)
-                  }
+                  type="text"
+                  onKeyPress={(e) => e.key === "Enter" && e.shiftKey && makeAddData(addSection)}
                   value={inputText}
                 />
                 <button
