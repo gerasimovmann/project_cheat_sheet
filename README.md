@@ -1,57 +1,57 @@
 <!-- prettier-ignore-start -->
 
-# Учебный проект Cheat Sheet JavaScript
+# Learning projects Cheat Sheet JavaScript
 
-[![en](https://img.shields.io/badge/lang-en-blue)](/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-blue)](/README.md)
 [![ru](https://img.shields.io/badge/lang-ru-green.svg)](/README.ru.md)
 
-Данный учебный проект был разработан для отработки знаний React.
+This training project was designed to practice React knowledge.
 
-Визуализация:
+Visualization:
 
 <img src="git_source/IMG_0212.gif" width="600" height="auto"/>
 
-## Описание
+## Description
 
-Мой второй учебный проект с использованием библиотеки React. Идея для данного проекта возникла, когда пришло осознание того, что часто приходится обращаться к сайтам типа MDN для получения информации в ходе написания кода. Было принято разработать решение, в котором я сам смогу вписывать информацию помимо имеющейся.
+My second learning project using the React library. The idea for this project came about when I realized that I often have to turn to sites like MDN to get information while writing code. I was decided to develop a solution in which I would be able to put in information in addition to the existing information.
 
-## Для запуска
+## To start
 
-Необходимо установить зависимости находясь в корневой папке проекта:
+Dependencies need to be installed while being in the root directory of the project:
 
 ```bash
 npm install
 ```
 
-Запустить приложение локально находясь в корневой папке проекта:
+Run the application locally in the root folder of the project:
 
 ```bash
 npm start
 ```
 
-## Что умеет приложение
+## What the app can do?
 
-#### Отображение информации в виде аккордеонов и элементов внутри
+#### Displaying information as accordions and elements within
 
-В данном случае текстовая информация приложения хранится в JSON формате на Frontend части приложения.
+In this case, the textual information of the application is stored in JSON format on the Frontend part of the application.
 
-#### Изменение цветовой темы
+#### Changing the color theme
 
-Функция изменения цветовой темы по кнопке.
+Function to change the color theme by button.
 
-#### Режим изменения информации
+#### Information change mode
 
 <img src="git_source/IMG_0213.gif" width="600" height="auto"/>
 
-В данном режиме приложение внутри интерфейса позволяет менять информацию (Для простоты реализации, данные храняться в localStorage :smile:)
+In this mode, the application inside the interface allows you to change information (For ease of implementation, the data is stored in localStorage :smile:)
 
-Функционал:
+Functionality:
 
-1. Возможность добавлять блоки, аккордионы
-2. Добавлять теги внутри аккордиона:
+1. Ability to add blocks, chords
+2. Add tags within an accordion:
    - h4
    - p
    - code
-3. Позволяет удалять блок с аккордионами
-4. Позволяет удалять аккордионы внутри блока
+3. Allows you to delete an accordion block
+4. Allows you to delete accordions within a block
 <!-- prettier-ignore-end -->
